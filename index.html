@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waterproofing Solutions | Premium Waterproofing Solutions</title>
+    <title>Waterproofing Solutions |  Waterproofing Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0a3d62;
@@ -31,7 +34,7 @@
         }
 
         h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Roboto', sans-serif;
             font-weight: 600;
         }
 
@@ -95,7 +98,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 4px 0;
         }
 
         .logo {
@@ -111,9 +114,12 @@
             color: var(--accent);
         }
 
-        .logo i {
+        .logo img {
             margin-right: 10px;
             font-size: 28px;
+            overflow: hidden;
+            width: 70px;
+            height: 70px;
         }
 
         .nav-links {
@@ -282,6 +288,7 @@
 
         .feature-item {
             display: flex;
+            flex-direction: row;
             align-items: center;
             margin-bottom: 15px;
         }
@@ -290,6 +297,12 @@
             color: var(--accent);
             font-size: 20px;
             margin-right: 15px;
+        }
+        
+        .feature-item p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--primary);
         }
 
         /* Services Section */
@@ -521,7 +534,7 @@
         /* Contact Section */
         .contact {
             padding: 100px 0;
-            background-color: var(--white);
+            background-color: var(--gray);
         }
 
         .contact-container {
@@ -767,6 +780,14 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            .logo-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            .logo-text {
+                margin-left: 10px;
+            }
         }
 
         @media screen and (max-width: 576px) {
@@ -783,6 +804,48 @@
                 font-size: 1.8rem;
             }
         }
+
+        .logo-marquee {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 30px 0;
+            background-color: #f8f8f8;
+        }
+
+        .logo-track {
+            display: flex;
+            animation: scroll 10s linear infinite;
+            width: calc(200px * 12); /* Adjust based on logo width and count */
+        }
+
+        .logo-item {
+            flex: 0 0 200px; /* Fixed width for each logo */
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-100px * 6)); /* Half the total width */
+            }
+        }
+
+        /* For a smoother infinite scroll, clone the logo items */
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body>
@@ -790,9 +853,12 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
+                <div class="logo-container">
                 <a href="#" class="logo">
-                    <i class="fas fa-tint"></i>Waterproofing<span>&nbsp;Solutions</span>
+                    <img src="/logo2.jpeg" alt="Waterproofing Solutions Logo">
+                    <h4>Waterproofing Solutions</h4>
                 </a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -814,11 +880,10 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>Premium Waterproofing Solutions for Your Property</h1>
+                <h1>Ultimate Waterproofing Solutions for Long-Lasting Protection</h1>
                 <p>Protect your investment with our industry-leading waterproofing systems. We provide comprehensive solutions for residential, commercial, and industrial properties.</p>
                 <div class="hero-btns">
                     <a href="#services" class="btn">Our Services</a>
-                    <a href="#contact" class="btn btn-outline">Get a Quote</a>
                 </div>
             </div>
         </div>
@@ -833,12 +898,12 @@
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://cdn.pixabay.com/photo/2022/08/19/06/36/water-tank-7396205_1280.jpg" alt="About Waterproofing Solutions">
+                    <img src="/hero.jpeg" alt="About Waterproofing Solutions">
                 </div>
                 <div class="about-text">
                     <h3>Your Trusted Waterproofing Partner</h3>
-                    <p>Waterproofing Solutions has been providing premium waterproofing solutions for over 15 years. We specialize in innovative technologies and high-quality materials to ensure long-lasting protection for your property.</p>
-                    <p>Our team of certified professionals is dedicated to delivering exceptional results that exceed industry standards and client expectations.</p>
+                    <p>Waterproofing Solutions is an Emerging Waterproofing Company & Contractors in Bangalore, experts in all the kinds of Waterproofing Works & Services. Our Policy is to deliver 100 % Quality in Work and We assure you that our Service Charges are cost effective and Comparatively Cheap.</p>
+                    <p>Since 1995, We have served 1000+ Clients in and around Bangalore. We do Terrace Waterproofing, Basement Waterproofing, Water Tank Waterproofing, Sump Waterproofing, Bathroom Waterproofing, Terrace Cool Coating etc..</p>
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -872,42 +937,39 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Basement Waterproofing">
+                        <img src="/basement.jpeg" alt="Basement Waterproofing">
                     </div>
                     <div class="service-content">
                         <h3>Basement Waterproofing</h3>
                         <p>Protect your basement from water damage with our comprehensive waterproofing solutions. We address both interior and exterior issues to ensure complete protection.</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                        
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Roof Waterproofing">
+                        <img src="/roof.jpeg" alt="Roof Waterproofing">
                     </div>
                     <div class="service-content">
                         <h3>Roof Waterproofing</h3>
-                        <p>Our roof waterproofing systems provide superior protection against leaks and water damage, extending the life of your roof and preventing costly repairs.</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                     <p>Our roof waterproofing systems provide superior protection against leaks and water damage, extending the life of your roof and preventing costly repairs.</p>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bathroom Waterproofing">
+                        <img src="/bathroom.jpeg" alt="Bathroom Waterproofing">
                     </div>
                     <div class="service-content">
                         <h3>Bathroom Waterproofing</h3>
                         <p>Prevent water seepage and mold growth in your bathrooms with our specialized waterproofing solutions designed for wet areas and high-moisture environments.</p>
-                        <a href="#contact" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Exterior Wall Waterproofing">
+                        <img src="/exteriorWall.jpeg" alt="Exterior Wall Waterproofing">
                     </div>
                     <div class="service-content">
                         <h3>Exterior Wall Waterproofing</h3>
                         <p>Protect your building's exterior walls from water infiltration with our advanced waterproofing systems that prevent dampness and structural damage.</p>
-                        <a href="#contact" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -917,17 +979,15 @@
                     <div class="service-content">
                         <h3>Water Tank Waterproofing</h3>
                         <p>Ensure the integrity of your water storage systems with our specialized tank waterproofing solutions that prevent leaks and contamination.</p>
-                        <a href="#contact" class="btn">Learn More</a>
                     </div>
                 </div>
                   <div class="service-card">
                       <div class="service-img">
-                          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project 1">
+                          <img src="/peb.jpeg" alt="Project 1">
                       </div>
                       <div class="service-content">
-                          <h3>Project 1</h3>
-                          <p>Location: New York, NY</p>
-                          <a href="#contact" class="btn">Learn More</a> 
+                          <h3>PEB structures</h3>
+                          <p>Waterproofing is crucial for Pre-Engineered Building (PEB) structures, primarily made of steel, to prevent corrosion, structural deterioration, and ensure the longevity and functionality of the building</p>
             </div>
         </div>
     </section>
@@ -942,42 +1002,32 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project 1">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project 1</h3>
-                        <p>Location: New York, NY</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                        <img src="/p1.jpeg" alt="Project 1">
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project 2">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project 2</h3>
-                        <p>Location: Los Angeles, CA</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                        <img src="/p2.jpeg" alt="Project 2">
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Project 3">
-                    </div>
-                    <div class="project-content">
-                        <h3>Project 3</h3>
-                        <p>Location: Chicago, IL</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                        <img src="/p4.jpeg" alt="Project 4">
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Project 4">
+                        <img src="/p5.jpeg" alt="Project 4">
                     </div>
-                    <div class="project-content">
-                        <h3>Project 4</h3>
-                        <p>Location: Miami, FL</p>
-                        <a href="#contact" class="btn">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/p6.jpeg" alt="Project 4">
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="/p7.jpeg" alt="Project 4">
                     </div>
                 </div>
             </div>
@@ -988,66 +1038,86 @@
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients have to say about our services.</p>
+                <h2>Our Clients</h2>
+                <p>We have served 1000+ Clients in and around karnataka.</p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonials-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-img">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Client 1">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>"Waterproofing Solutions did an amazing job waterproofing my basement. They were professional, efficient, and the results exceeded my expectations."</p>
-                            <p>- John Doe</p>
-                        </div>
+            <div class="logo-marquee">
+                <div class="logo-track">
+                    <div class="logo-item">
+                        <img src="/toyota.jpeg" alt="Partner Logo 1">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-img">
-                            <img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Client 2">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>"I was very impressed with the quality of work and the attention to detail. Waterproofing Solutions did an excellent job waterproofing my roof."</p>
-                            <p>- Jane Smith</p>
-                        </div>
+                    <div class="logo-item">
+                        <img src="/bosch.jpeg" alt="Partner Logo 2">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-img">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Client 3">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>"The team at Waterproofing Solutions was fantastic to work with. They were able to complete the bathroom waterproofing project on time and within budget."</p>
-                            <p>- Bob Johnson</p>
-                        </div>
+                    <div class="logo-item">
+                        <img src="narayana.jpeg" alt="Partner Logo 3">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-img">
-                            <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80" alt="Client 4">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>"Waterproofing Solutions exterior wall waterproofing solution has made a significant difference in protecting my building. I highly recommend their services."</p>
-                            <p>- Alice Brown</p>
-                        </div>
+                    <div class="logo-item">
+                        <img src="/namma.jpeg" alt="Partner Logo 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="/tata.jpeg" alt="Partner Logo 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="/accentue.jpeg" alt="Partner Logo 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="/jail.jpeg" alt="Partner Logo 6">
                     </div>
                 </div>
             </div>
-            <div class="testimonial-nav">
-                <button class="testimonial-nav-button">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="testimonial-nav-button">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
+            
         </div>
     </section>
+
+                <!-- Add Reviews Section -->
+                <section class="projects" id="projects">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Customer Reviews</h2>
+                            <p>What our clients have to say about our services.</p>
+                        </div>
+                        <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review1.jpeg" alt="Project 1">
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review2.jpeg" alt="Project 2">
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review3.jpeg" alt="Project 4">
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review4.jpeg" alt="Project 4">
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review5.jpeg" alt="Project 4">
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <div class="project-img">
+                                    <img src="/review6.jpeg" alt="Project 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2>Get in Touch</h2>
-                <p>We'd love to hear from you. Fill out the form below to get started.</p>
+                <p>We'd love to hear from you.</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
@@ -1055,35 +1125,17 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p>123 Main St, New York, NY 10001</p>
+                            <p>PRAKRUTHI. 52, 5th Main, 3rd Main Rd, Giridhama Layout, BEML Layout 3rd Stage, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
-                            <p>(555) 555-5555</p>
+                            <p>9972733323</p>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <p>info@waterproofingsolutions.com</p>
+                            <p>waterproofingapplicators@rediffmail.com</p>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Contact Form</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -1116,7 +1168,6 @@
                     <h4>Contact</h4>
                     <ul>
                         <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#contact">Get a Quote</a></li>
                     </ul>
                 </div>
             </div>
